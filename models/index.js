@@ -22,7 +22,7 @@ Product.belongsToMany(Tag, {
     model: ProductTag,
     foreignKey: 'product_id',
     onDelete: 'CASCADE',
-    unique: false
+    unique: true
   },
   as: 'product_tags'
 });
@@ -33,7 +33,7 @@ Tag.belongsToMany(Product, {
     model: ProductTag,
     foreignKey: 'tag_id',
     onDelete: 'CASCADE',
-    unique: false
+    unique: true
   },
   as: 'product_tags'
 });
